@@ -17,8 +17,8 @@ always @* begin
     2'b01: result = added_result;
     2'b10: result = anded_result;
     2'b11: result = added_result;
+    default: result = 4'b0;
   endcase
 end
-    
-  
+
 endmodule
