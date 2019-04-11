@@ -1,0 +1,338 @@
+// Copyright (C) 1991-2008 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EPF6016TC144-2 Package TQFP144
+// 
+
+// 
+// This SDF file should be used for ModelSim (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "lab1_top")
+  (DATE "04/11/2019 13:33:29")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II")
+  (VERSION "Version 8.1 Build 163 10/28/2008 SJ Web Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE LEFT_pushbutton\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE A\[0\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE added_result\[0\]\~8.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3000:3000:3000) (3000:3000:3000))
+        (PORT datab (1500:1500:1500) (1500:1500:1500))
+        (IOPATH dataa combout (2700:2700:2700) (2700:2700:2700))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH dataa cout (1700:1700:1700) (1700:1700:1700))
+        (IOPATH datab cout (1500:1500:1500) (1500:1500:1500))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE B\[0\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~71.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1500:1500:1500) (1500:1500:1500))
+        (PORT datad (3000:3000:3000) (3000:3000:3000))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE RIGHT_pushbutton\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~72.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (4800:4800:4800) (4800:4800:4800))
+        (PORT datab (200:200:200) (200:200:200))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datad (4900:4900:4900) (4900:4900:4900))
+        (IOPATH dataa combout (2700:2700:2700) (2700:2700:2700))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datac combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE A\[1\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE added_result\[1\]\~10.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3000:3000:3000) (3000:3000:3000))
+        (PORT datab (1500:1500:1500) (1500:1500:1500))
+        (PORT cin (0:0:0) (0:0:0))
+        (IOPATH dataa combout (2700:2700:2700) (2700:2700:2700))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH cin combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH dataa cout (1700:1700:1700) (1700:1700:1700))
+        (IOPATH datab cout (1500:1500:1500) (1500:1500:1500))
+        (IOPATH cin cout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE B\[1\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~73.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1500:1500:1500) (1500:1500:1500))
+        (PORT datad (3000:3000:3000) (3000:3000:3000))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~74.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (4800:4800:4800) (4800:4800:4800))
+        (PORT datab (200:200:200) (200:200:200))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datad (4900:4900:4900) (4900:4900:4900))
+        (IOPATH dataa combout (2700:2700:2700) (2700:2700:2700))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datac combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE A\[2\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE added_result\[2\]\~12.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3200:3200:3200) (3200:3200:3200))
+        (PORT datab (1300:1300:1300) (1300:1300:1300))
+        (PORT cin (0:0:0) (0:0:0))
+        (IOPATH dataa combout (2700:2700:2700) (2700:2700:2700))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH cin combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH dataa cout (1700:1700:1700) (1700:1700:1700))
+        (IOPATH datab cout (1500:1500:1500) (1500:1500:1500))
+        (IOPATH cin cout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE B\[2\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~75.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (3200:3200:3200) (3200:3200:3200))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~76.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (200:200:200) (200:200:200))
+        (PORT datab (4800:4800:4800) (4800:4800:4800))
+        (PORT datac (4900:4900:4900) (4900:4900:4900))
+        (PORT datad (200:200:200) (200:200:200))
+        (IOPATH dataa combout (2700:2700:2700) (2700:2700:2700))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datac combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE B\[3\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE A\[3\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (3300:3300:3300) (3300:3300:3300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE added_result\[3\]\~14.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (3000:3000:3000) (3000:3000:3000))
+        (PORT datad (1300:1300:1300) (1300:1300:1300))
+        (PORT cin (0:0:0) (0:0:0))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH cin combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~77.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (3000:3000:3000) (3000:3000:3000))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_lcell")
+    (INSTANCE Add0\~78.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (200:200:200) (200:200:200))
+        (PORT datab (4800:4800:4800) (4800:4800:4800))
+        (PORT datac (4900:4900:4900) (4900:4900:4900))
+        (PORT datad (200:200:200) (200:200:200))
+        (IOPATH dataa combout (2700:2700:2700) (2700:2700:2700))
+        (IOPATH datab combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datac combout (2400:2400:2400) (2400:2400:2400))
+        (IOPATH datad combout (2400:2400:2400) (2400:2400:2400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE result\[0\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (4600:4600:4600) (4600:4600:4600))
+        (IOPATH datain padio (2300:2300:2300) (2300:2300:2300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE result\[1\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (4600:4600:4600) (4600:4600:4600))
+        (IOPATH datain padio (2300:2300:2300) (2300:2300:2300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE result\[2\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (4300:4300:4300) (4300:4300:4300))
+        (IOPATH datain padio (2300:2300:2300) (2300:2300:2300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex6k_asynch_io")
+    (INSTANCE result\[3\]\~I.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (4300:4300:4300) (4300:4300:4300))
+        (IOPATH datain padio (2300:2300:2300) (2300:2300:2300))
+      )
+    )
+  )
+)

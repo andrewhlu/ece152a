@@ -1,0 +1,15 @@
+X:/lab1_top_tb.v {1 {vlog -work work -vopt X:/lab1_top_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module lab1_top_tb
+
+Top level modules:
+	lab1_top_tb
+
+} {} {}} X:/lab1_top.v {1 {vlog -work work -vopt X:/lab1_top.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module lab1_top
+
+Top level modules:
+	lab1_top
+
+} {} {}}

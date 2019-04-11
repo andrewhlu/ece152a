@@ -1,0 +1,41 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\modeltech_10.1b\examples
+vlab1_top
+!i10b 1
+!s100 jCKPY8^hLjT?BjBYDKRhR2
+IfI`;MM<9SY]3:hjdzHlR`2
+Z1 VM`9]GX8fGk_?J2>ZJGCK]0
+dX:\
+w1554414894
+Z2 8X:/lab1_top.v
+Z3 FX:/lab1_top.v
+L0 1
+Z4 OE;L;10.1b;51
+r1
+!s85 0
+31
+!s108 1554414902.426000
+!s107 X:/lab1_top.v|
+Z5 !s90 -reportprogress|300|-work|work|-vopt|X:/lab1_top.v|
+Z6 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vlab1_top_tb
+Z7 VXlDA]L^D864<nD]If=El>3
+r1
+31
+Z8 IEDc0=I9<1ioz_]o@[j>7h0
+dX:\
+Z9 w1554413136
+Z10 8X:/lab1_top_tb.v
+Z11 FX:/lab1_top_tb.v
+L0 1
+R4
+R6
+Z12 !s90 -reportprogress|300|-work|work|-vopt|X:/lab1_top_tb.v|
+Z13 !s100 z32:Z[8EcQ76n2137=QB;1
+Z14 !s108 1554413143.497000
+Z15 !s107 X:/lab1_top_tb.v|
+!i10b 1
+!s85 0
