@@ -1,0 +1,153 @@
+m255
+K3
+13
+cModel Technology
+dC:\modeltech_10.1b\examples
+vfourBitAdder_FourByOne
+V4k_:37EjR<zBhXbDHjJMi1
+r1
+31
+IAHz6RZ5g0l37<_Sl?`1dQ1
+Z0 dX:\ece152a\lab2
+w1555621077
+8X:/ece152a/lab2/fourBitAdder_FourByOne.v
+FX:/ece152a/lab2/fourBitAdder_FourByOne.v
+L0 1
+Z1 OE;L;10.1b;51
+Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+nfour@bit@adder_@four@by@one
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/fourBitAdder_FourByOne.v|
+!s100 ;[Fa<Dg^o8M<GJcR=`QRM0
+!s108 1555621395.006000
+!s107 X:/ece152a/lab2/fourBitAdder_FourByOne.v|
+!i10b 1
+!s85 0
+vfourBitAdder_TwoByTwo
+!i10b 1
+VnD;V@c@_RX5aASQCgF1bb0
+r1
+!s85 0
+31
+IKJXc64Dgh8321`EDHzfUE1
+Z3 dX:\ece152a\lab2
+w1555623960
+8X:/ece152a/lab2/fourBitAdder_TwoByTwo.v
+FX:/ece152a/lab2/fourBitAdder_TwoByTwo.v
+L0 1
+R1
+R2
+nfour@bit@adder_@two@by@two
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/fourBitAdder_TwoByTwo.v|
+!s100 D?c_CQn=KBmb@eE_Jn45D2
+!s108 1555624063.003000
+!s107 X:/ece152a/lab2/fourBitAdder_TwoByTwo.v|
+vfullAdder
+V[O<9OCZUnD:gWPkP@KWn93
+r1
+31
+I<c3Y]ICzM1H:aHR12EGn32
+R3
+w1555621016
+8X:/ece152a/lab2/fullAdder.v
+FX:/ece152a/lab2/fullAdder.v
+L0 1
+R1
+R2
+nfull@adder
+!s100 BBnD8T@nn]YZ5FaQFRKm`3
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/fullAdder.v|
+!s108 1555621024.576000
+!s107 X:/ece152a/lab2/fullAdder.v|
+!i10b 1
+!s85 0
+vlab2_2ba_tb
+Vhd8[dzg;NG3[9?1OaG=mS1
+r1
+31
+IMk`NRoQ?>:Q;MBiH>^z>X0
+R3
+w1555623832
+8X:/ece152a/lab2/lab2_2ba_tb.v
+FX:/ece152a/lab2/lab2_2ba_tb.v
+L0 1
+R1
+R2
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/lab2_2ba_tb.v|
+!s100 ]j05F[Z<A[?akaY0XcZR^3
+!s108 1555623842.533000
+!s107 X:/ece152a/lab2/lab2_2ba_tb.v|
+!i10b 1
+!s85 0
+vlab2_4ba2_tb
+VPS?H:c]odmmc]gNiU15>L1
+r1
+31
+IHIdLAz0[KmKSAze4jBI@73
+R3
+w1555624011
+8X:/ece152a/lab2/lab2_4ba2_tb.v
+FX:/ece152a/lab2/lab2_4ba2_tb.v
+L0 1
+R1
+R2
+!i10b 1
+!s85 0
+!s100 fd6njYdKdoeAeg5<n>EIZ2
+!s108 1555624063.203000
+!s107 X:/ece152a/lab2/lab2_4ba2_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/lab2_4ba2_tb.v|
+vlab2_fa_tb
+VINQeoWl50fcf92lQ?FIcG2
+r1
+31
+Ifn?3c^g78n<LGbDjRZV`50
+R3
+w1555621550
+8X:/ece152a/lab2/lab2_fa_tb.v
+FX:/ece152a/lab2/lab2_fa_tb.v
+L0 1
+R1
+R2
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/lab2_fa_tb.v|
+!s100 nGbLX;KP2V_jGGRh3c0C82
+!s108 1555621559.946000
+!s107 X:/ece152a/lab2/lab2_fa_tb.v|
+!i10b 1
+!s85 0
+vlab2_tb
+V[ECgV8C?LM3CfGSeMDWiJ2
+r1
+31
+IY3B`n05^YRmBXP2Se[=SG2
+R3
+w1555621730
+8X:/ece152a/lab2/lab2_tb.v
+FX:/ece152a/lab2/lab2_tb.v
+L0 1
+R1
+R2
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/lab2_tb.v|
+!s100 0];:L2KV`6EeL:[1QCF;m3
+!s108 1555621740.706000
+!s107 X:/ece152a/lab2/lab2_tb.v|
+!i10b 1
+!s85 0
+vtwoBitAdder
+VYH;8;=TaH9MFGYo[iJf??3
+r1
+31
+I>82@LTO3L2>m0?oHGVZ9;0
+R3
+w1555623702
+8X:/ece152a/lab2/twoBitAdder.v
+FX:/ece152a/lab2/twoBitAdder.v
+L0 1
+R1
+R2
+ntwo@bit@adder
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab2/twoBitAdder.v|
+!s100 ?fTm1ZbJ@Qohz:O`UNSBS1
+!s108 1555623842.753000
+!s107 X:/ece152a/lab2/twoBitAdder.v|
+!i10b 1
+!s85 0

@@ -1,0 +1,57 @@
+X:/ece152a/lab2/lab2_4ba2_tb.v {1 {vlog -work work -vopt X:/ece152a/lab2/lab2_4ba2_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module lab2_4ba2_tb
+
+Top level modules:
+	lab2_4ba2_tb
+
+} {} {}} X:/ece152a/lab2/lab2_2ba_tb.v {1 {vlog -work work -vopt X:/ece152a/lab2/lab2_2ba_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module lab2_2ba_tb
+
+Top level modules:
+	lab2_2ba_tb
+
+} {} {}} X:/ece152a/lab2/lab2_tb.v {1 {vlog -work work -vopt X:/ece152a/lab2/lab2_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module lab2_tb
+
+Top level modules:
+	lab2_tb
+
+} {} {}} X:/ece152a/lab2/fourBitAdder_FourByOne.v {1 {vlog -work work -vopt X:/ece152a/lab2/fourBitAdder_FourByOne.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module fourBitAdder_FourByOne
+
+Top level modules:
+	fourBitAdder_FourByOne
+
+} {} {}} X:/ece152a/lab2/fullAdder.v {1 {vlog -work work -vopt X:/ece152a/lab2/fullAdder.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module fullAdder
+
+Top level modules:
+	fullAdder
+
+} {} {}} X:/ece152a/lab2/lab2_fa_tb.v {1 {vlog -work work -vopt X:/ece152a/lab2/lab2_fa_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module lab2_fa_tb
+
+Top level modules:
+	lab2_fa_tb
+
+} {} {}} X:/ece152a/lab2/fourBitAdder_TwoByTwo.v {1 {vlog -work work -vopt X:/ece152a/lab2/fourBitAdder_TwoByTwo.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module fourBitAdder_TwoByTwo
+
+Top level modules:
+	fourBitAdder_TwoByTwo
+
+} {} {}} X:/ece152a/lab2/twoBitAdder.v {1 {vlog -work work -vopt X:/ece152a/lab2/twoBitAdder.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module twoBitAdder
+
+Top level modules:
+	twoBitAdder
+
+} {} {}}
