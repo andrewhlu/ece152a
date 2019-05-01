@@ -15,9 +15,9 @@ FX:/ece152a/lab3/adder.v
 L0 1
 Z1 OE;L;10.1b;51
 Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/adder.v|
 !s100 :hVEehhB4<baWhleo3Vn`2
-!s108 1556692456.771000
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/adder.v|
+!s108 1556703023.015000
 !s107 X:/ece152a/lab3/adder.v|
 !i10b 1
 !s85 0
@@ -33,17 +33,15 @@ R1
 r1
 31
 R2
-!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/adder_tb.v|
 !s100 5RLmheh`f?eG>SK3j601`0
-!s108 1556694681.270000
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/adder_tb.v|
+!s108 1556703024.825000
 !s107 X:/ece152a/lab3/adder_tb.v|
 !i10b 1
 !s85 0
 vbig_number_first
-!i10b 1
 VUY4mZHQen9QU^AZUcES_F0
 r1
-!s85 0
 31
 IUlU6Q09SYS3M]P^LWonD<2
 R3
@@ -55,8 +53,10 @@ R1
 R2
 !s100 fk=4Wb^zYDXdcMzmEnNQa0
 !s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/big_number_first.v|
-!s108 1556698549.944000
+!s108 1556703023.215000
 !s107 X:/ece152a/lab3/big_number_first.v|
+!i10b 1
+!s85 0
 vbig_number_first_tb
 I2SIGnNd>V39Ia@hXBWUj`3
 VB>N7J61Ne0jUU9DS_Y7Eg3
@@ -71,7 +71,7 @@ r1
 R2
 !s100 U>=SU:`Jz:WHT8bW5Olib2
 !s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/big_number_first_tb.v|
-!s108 1556698550.164000
+!s108 1556703023.495000
 !s107 X:/ece152a/lab3/big_number_first_tb.v|
 !i10b 1
 !s85 0
@@ -79,37 +79,37 @@ vfloat_add
 Vm_SY]>niAkSMeRY=PFT[M3
 r1
 31
-IVS;7RA54eiJI0kINh36oY2
+Ij0_hffNaJo9FoEQIH0R?F1
 R3
-w1556697479
+w1556704571
 8X:/ece152a/lab3/float_add.v
 FX:/ece152a/lab3/float_add.v
 L0 1
 R1
 R2
+!s100 AO8R<hEjOC25;2I2U=IBG1
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/float_add.v|
+!s108 1556704769.587000
+!s107 X:/ece152a/lab3/float_add.v|
 !i10b 1
 !s85 0
-!s100 7i8Wlm7SBiQ]R;dg=C]TY2
-!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/float_add.v|
-!s108 1556698550.384000
-!s107 X:/ece152a/lab3/float_add.v|
 vfloat_add_tb
+!i10b 1
 V6giE4I6anF4j0RX^Vef?23
 r1
+!s85 0
 31
-I_F8Q?6gbehaZOd1TEPA`K0
+I[bF>:jzd4WK=[EX^SlSXa0
 R3
-w1556698539
+w1556704812
 8X:/ece152a/lab3/float_add_tb.v
 FX:/ece152a/lab3/float_add_tb.v
 L0 1
 R1
-R2
-!i10b 1
-!s85 0
 !s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/float_add_tb.v|
-!s100 a>d2e:aE;RRQT3ag]<Bhz3
-!s108 1556698550.604000
+R2
+!s100 KDUBQ3I]cbQQijUhcB2dJ1
+!s108 1556704818.321000
 !s107 X:/ece152a/lab3/float_add_tb.v|
 vfullAdder
 V[O<9OCZUnD:gWPkP@KWn93
@@ -125,9 +125,9 @@ R1
 R2
 nfull@adder
 !s100 WQ>IQG[nXoGa6h@KUL62l1
-!s108 1556692336.158000
-!s107 X:/ece152a/lab3/fullAdder.v|
 !s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/fullAdder.v|
+!s108 1556703025.045000
+!s107 X:/ece152a/lab3/fullAdder.v|
 !i10b 1
 !s85 0
 vshifter
@@ -142,63 +142,63 @@ FX:/ece152a/lab3/shifter.v
 L0 1
 R1
 R2
-!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/shifter.v|
 !s100 :@dB@=?[LMAc?@I=9CH>?1
-!s108 1556692335.518000
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/shifter.v|
+!s108 1556703023.945000
 !s107 X:/ece152a/lab3/shifter.v|
 !i10b 1
 !s85 0
 vshifter_tb
-VX;88Uh@F<7<fW[MUNd4j12
-r1
-31
 IPJn6]R?DQg?``ih<`h_0f0
+VX;88Uh@F<7<fW[MUNd4j12
 R3
 w1556691974
 8X:/ece152a/lab3/shifter_tb.v
 FX:/ece152a/lab3/shifter_tb.v
 L0 1
 R1
+r1
+31
 R2
 !s100 eQ8<Dj^ZQSjfTXFN3<Cc32
-!s108 1556692011.084000
-!s107 X:/ece152a/lab3/shifter_tb.v|
 !s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/shifter_tb.v|
+!s108 1556703024.595000
+!s107 X:/ece152a/lab3/shifter_tb.v|
 !i10b 1
 !s85 0
 vtest
-VcEVogNKAiZNFzf<QQaP:e3
-r1
-31
 IgR=T9^@PSe7K>4gYn8ZAl1
+VcEVogNKAiZNFzf<QQaP:e3
 R3
 w1556690325
 8X:/ece152a/lab3/test.v
 FX:/ece152a/lab3/test.v
 L0 1
 R1
+r1
+31
 R2
-!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/test.v|
 !s100 4zoG53J3AY398cGIOlDbd2
-!s108 1556690333.153000
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/test.v|
+!s108 1556703024.165000
 !s107 X:/ece152a/lab3/test.v|
 !i10b 1
 !s85 0
 vtest_tb
-VRT=GWF@D^J^nIYaC5k:O>1
-r1
-31
 IefKD>0[1@[CG9aEHb5JcR3
+VRT=GWF@D^J^nIYaC5k:O>1
 R3
 w1556689852
 8X:/ece152a/lab3/test_tb.v
 FX:/ece152a/lab3/test_tb.v
 L0 1
 R1
+r1
+31
 R2
-!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/test_tb.v|
 !s100 fzc_h8I[dYGTFZ;j7V4fl0
-!s108 1556689868.340000
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab3/test_tb.v|
+!s108 1556703024.395000
 !s107 X:/ece152a/lab3/test_tb.v|
 !i10b 1
 !s85 0

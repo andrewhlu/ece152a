@@ -63,15 +63,59 @@ shifter step4 (
 	.out(resultMan)
 );
 
+reg [4:0] resultManShift;
+reg [2:0] distance3;
+wire [4:0] resultManShift2;
+
+reg [2:0] numToShift1;
+
+wire [2:0] resultExpShift;
+assign resultExpShift = resultExp - distance3;
+
+shifter step5(
+	.in(resultManShift),
+	.distance(distance3),
+	.direction(1'b0),
+	.out(resultManShift2)
+);
+
 always @* begin
+	case(adderCout)
+		1'b0: resultManShift = resultMan;
+		1'b1: resultManShift = {1'b1, resultMan[3:0]};
+	endcase
+
 	if(bExpShift == 3'b111 && adderCout == 1'b1)
+		// Saturation case
 		result = 8'b11111111;
+	else if(resultManShift == 5'b00000)
+		result = 8'b00000000;
 	else 
+		// Handling the carry bit from the adder
 		begin
-			case(adderCout)
-				1'b0: result = {resultExp, resultMan};
-				1'b1: result = {resultExp, 1'b1, resultMan[3:0]};
-			endcase
+			if(resultExp != 3'b000 && resultManShift[4] == 1'b0)
+				begin 
+					// Normalizing - determining how many bits to shift mantissa
+					casex(resultManShift)
+						5'b00001: numToShift1 = 3'b100;
+						5'b0001x:	numToShift1 = 3'b011;
+						5'b001xx: numToShift1 = 3'b010;
+						5'b01xxx: numToShift1 = 3'b001;
+						default: numToShift1 = 3'b000;
+					endcase
+				end
+			else
+				numToShift1 = 3'b000;
+
+			// Normalizing - determining how many bits to shift mantissa
+			if(resultExp < numToShift1)
+				distance3 = resultExp;
+			else if (resultExp >= numToShift1)
+				distance3 = numToShift1;
+			else
+				distance3 = 3'b000;
+
+			result = {resultExpShift, resultManShift2};
 		end
 end
 

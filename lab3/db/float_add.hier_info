@@ -15,14 +15,14 @@ bIn[4] => bIn[4]~3.IN1
 bIn[5] => bIn[5]~2.IN1
 bIn[6] => bIn[6]~1.IN1
 bIn[7] => bIn[7]~0.IN1
-result[0] <= result~8.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result~7.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result~6.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result~5.DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= result~4.DB_MAX_OUTPUT_PORT_TYPE
-result[5] <= result~3.DB_MAX_OUTPUT_PORT_TYPE
-result[6] <= result~2.DB_MAX_OUTPUT_PORT_TYPE
-result[7] <= result~1.DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= result~15.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result~14.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result~13.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result~12.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result~11.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result~10.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result~9.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result~8.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |float_add|big_number_first:step1
@@ -198,6 +198,31 @@ Cout <= Cout~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |float_add|shifter:step4
+in[0] => ShiftRight0.IN5
+in[0] => ShiftLeft0.IN5
+in[1] => ShiftRight0.IN4
+in[1] => ShiftLeft0.IN4
+in[2] => ShiftRight0.IN3
+in[2] => ShiftLeft0.IN3
+in[3] => ShiftRight0.IN2
+in[3] => ShiftLeft0.IN2
+in[4] => ShiftRight0.IN1
+in[4] => ShiftLeft0.IN1
+distance[0] => ShiftRight0.IN8
+distance[0] => ShiftLeft0.IN8
+distance[1] => ShiftRight0.IN7
+distance[1] => ShiftLeft0.IN7
+distance[2] => ShiftRight0.IN6
+distance[2] => ShiftLeft0.IN6
+direction => Decoder0.IN0
+out[0] <= out~4.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~3.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~1.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|shifter:step5
 in[0] => ShiftRight0.IN5
 in[0] => ShiftLeft0.IN5
 in[1] => ShiftRight0.IN4

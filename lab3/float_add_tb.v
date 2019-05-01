@@ -51,6 +51,16 @@ initial begin
 	#5
 	$display("Output is %b, we expected %b", sim_result, 8'b11111110);
 
+	sim_aIn = 8'b11100000;
+	sim_bIn = 8'b11100000;
+	#5
+	$display("Output is %b, we expected %b", sim_result, 8'b00000000);
+
+	sim_aIn = 8'b00100000;
+	sim_bIn = 8'b00000100;
+	#5
+	$display("Output is %b, we expected %b", sim_result, 8'b00000100);
+
 	$stop;
 end
 
