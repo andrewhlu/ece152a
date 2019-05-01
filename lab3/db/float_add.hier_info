@@ -1,0 +1,224 @@
+|float_add
+aIn[0] => aIn[0]~7.IN1
+aIn[1] => aIn[1]~6.IN1
+aIn[2] => aIn[2]~5.IN1
+aIn[3] => aIn[3]~4.IN1
+aIn[4] => aIn[4]~3.IN1
+aIn[5] => aIn[5]~2.IN1
+aIn[6] => aIn[6]~1.IN1
+aIn[7] => aIn[7]~0.IN1
+bIn[0] => bIn[0]~7.IN1
+bIn[1] => bIn[1]~6.IN1
+bIn[2] => bIn[2]~5.IN1
+bIn[3] => bIn[3]~4.IN1
+bIn[4] => bIn[4]~3.IN1
+bIn[5] => bIn[5]~2.IN1
+bIn[6] => bIn[6]~1.IN1
+bIn[7] => bIn[7]~0.IN1
+result[0] <= result~8.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result~7.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result~6.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result~5.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result~4.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result~3.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result~2.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|big_number_first:step1
+aIn[0] => bOut~7.DATAB
+aIn[0] => aOut~7.DATAA
+aIn[0] => LessThan1.IN5
+aIn[1] => bOut~6.DATAB
+aIn[1] => aOut~6.DATAA
+aIn[1] => LessThan1.IN4
+aIn[2] => bOut~5.DATAB
+aIn[2] => aOut~5.DATAA
+aIn[2] => LessThan1.IN3
+aIn[3] => bOut~4.DATAB
+aIn[3] => aOut~4.DATAA
+aIn[3] => LessThan1.IN2
+aIn[4] => bOut~3.DATAB
+aIn[4] => aOut~3.DATAA
+aIn[4] => LessThan1.IN1
+aIn[5] => bOut~2.DATAB
+aIn[5] => aOut~2.DATAA
+aIn[5] => Equal0.IN2
+aIn[5] => LessThan0.IN3
+aIn[6] => bOut~1.DATAB
+aIn[6] => aOut~1.DATAA
+aIn[6] => Equal0.IN1
+aIn[6] => LessThan0.IN2
+aIn[7] => bOut~0.DATAB
+aIn[7] => aOut~0.DATAA
+aIn[7] => Equal0.IN0
+aIn[7] => LessThan0.IN1
+bIn[0] => bOut~7.DATAA
+bIn[0] => aOut~7.DATAB
+bIn[0] => LessThan1.IN10
+bIn[1] => bOut~6.DATAA
+bIn[1] => aOut~6.DATAB
+bIn[1] => LessThan1.IN9
+bIn[2] => bOut~5.DATAA
+bIn[2] => aOut~5.DATAB
+bIn[2] => LessThan1.IN8
+bIn[3] => bOut~4.DATAA
+bIn[3] => aOut~4.DATAB
+bIn[3] => LessThan1.IN7
+bIn[4] => bOut~3.DATAA
+bIn[4] => aOut~3.DATAB
+bIn[4] => LessThan1.IN6
+bIn[5] => bOut~2.DATAA
+bIn[5] => aOut~2.DATAB
+bIn[5] => Equal0.IN5
+bIn[5] => LessThan0.IN6
+bIn[6] => bOut~1.DATAA
+bIn[6] => aOut~1.DATAB
+bIn[6] => Equal0.IN4
+bIn[6] => LessThan0.IN5
+bIn[7] => bOut~0.DATAA
+bIn[7] => aOut~0.DATAB
+bIn[7] => Equal0.IN3
+bIn[7] => LessThan0.IN4
+aOut[0] <= aOut~7.DB_MAX_OUTPUT_PORT_TYPE
+aOut[1] <= aOut~6.DB_MAX_OUTPUT_PORT_TYPE
+aOut[2] <= aOut~5.DB_MAX_OUTPUT_PORT_TYPE
+aOut[3] <= aOut~4.DB_MAX_OUTPUT_PORT_TYPE
+aOut[4] <= aOut~3.DB_MAX_OUTPUT_PORT_TYPE
+aOut[5] <= aOut~2.DB_MAX_OUTPUT_PORT_TYPE
+aOut[6] <= aOut~1.DB_MAX_OUTPUT_PORT_TYPE
+aOut[7] <= aOut~0.DB_MAX_OUTPUT_PORT_TYPE
+bOut[0] <= bOut~7.DB_MAX_OUTPUT_PORT_TYPE
+bOut[1] <= bOut~6.DB_MAX_OUTPUT_PORT_TYPE
+bOut[2] <= bOut~5.DB_MAX_OUTPUT_PORT_TYPE
+bOut[3] <= bOut~4.DB_MAX_OUTPUT_PORT_TYPE
+bOut[4] <= bOut~3.DB_MAX_OUTPUT_PORT_TYPE
+bOut[5] <= bOut~2.DB_MAX_OUTPUT_PORT_TYPE
+bOut[6] <= bOut~1.DB_MAX_OUTPUT_PORT_TYPE
+bOut[7] <= bOut~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|shifter:step2
+in[0] => ShiftRight0.IN5
+in[0] => ShiftLeft0.IN5
+in[1] => ShiftRight0.IN4
+in[1] => ShiftLeft0.IN4
+in[2] => ShiftRight0.IN3
+in[2] => ShiftLeft0.IN3
+in[3] => ShiftRight0.IN2
+in[3] => ShiftLeft0.IN2
+in[4] => ShiftRight0.IN1
+in[4] => ShiftLeft0.IN1
+distance[0] => ShiftRight0.IN8
+distance[0] => ShiftLeft0.IN8
+distance[1] => ShiftRight0.IN7
+distance[1] => ShiftLeft0.IN7
+distance[2] => ShiftRight0.IN6
+distance[2] => ShiftLeft0.IN6
+direction => Decoder0.IN0
+out[0] <= out~4.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~3.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~1.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|adder:step3
+A[0] => A[0]~4.IN1
+A[1] => A[1]~3.IN1
+A[2] => A[2]~2.IN1
+A[3] => A[3]~1.IN1
+A[4] => A[4]~0.IN1
+B[0] => B[0]~4.IN1
+B[1] => B[1]~3.IN1
+B[2] => B[2]~2.IN1
+B[3] => B[3]~1.IN1
+B[4] => B[4]~0.IN1
+S[0] <= fullAdder:a0.S
+S[1] <= fullAdder:a1.S
+S[2] <= fullAdder:a2.S
+S[3] <= fullAdder:a3.S
+S[4] <= fullAdder:a4.S
+Cout <= fullAdder:a4.Cout
+
+
+|float_add|adder:step3|fullAdder:a0
+A => AaB.IN0
+A => AxB.IN0
+B => AaB.IN1
+B => AxB.IN1
+Cin => S~0.IN0
+Cin => AxBaCin.IN0
+S <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|adder:step3|fullAdder:a1
+A => AaB.IN0
+A => AxB.IN0
+B => AaB.IN1
+B => AxB.IN1
+Cin => S~0.IN0
+Cin => AxBaCin.IN0
+S <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|adder:step3|fullAdder:a2
+A => AaB.IN0
+A => AxB.IN0
+B => AaB.IN1
+B => AxB.IN1
+Cin => S~0.IN0
+Cin => AxBaCin.IN0
+S <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|adder:step3|fullAdder:a3
+A => AaB.IN0
+A => AxB.IN0
+B => AaB.IN1
+B => AxB.IN1
+Cin => S~0.IN0
+Cin => AxBaCin.IN0
+S <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|adder:step3|fullAdder:a4
+A => AaB.IN0
+A => AxB.IN0
+B => AaB.IN1
+B => AxB.IN1
+Cin => S~0.IN0
+Cin => AxBaCin.IN0
+S <= S~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|float_add|shifter:step4
+in[0] => ShiftRight0.IN5
+in[0] => ShiftLeft0.IN5
+in[1] => ShiftRight0.IN4
+in[1] => ShiftLeft0.IN4
+in[2] => ShiftRight0.IN3
+in[2] => ShiftLeft0.IN3
+in[3] => ShiftRight0.IN2
+in[3] => ShiftLeft0.IN2
+in[4] => ShiftRight0.IN1
+in[4] => ShiftLeft0.IN1
+distance[0] => ShiftRight0.IN8
+distance[0] => ShiftLeft0.IN8
+distance[1] => ShiftRight0.IN7
+distance[1] => ShiftLeft0.IN7
+distance[2] => ShiftRight0.IN6
+distance[2] => ShiftLeft0.IN6
+direction => Decoder0.IN0
+out[0] <= out~4.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~3.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~1.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

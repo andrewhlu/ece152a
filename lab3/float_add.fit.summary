@@ -1,0 +1,9 @@
+Fitter Status : Successful - Wed May 01 00:57:12 2019
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
+Revision Name : float_add
+Top-level Entity Name : float_add
+Family : FLEX6000
+Device : EPF6016TC144-2
+Timing Models : Final
+Total logic elements : 58 / 1,320 ( 4 % )
+Total pins : 24 / 117 ( 21 % )

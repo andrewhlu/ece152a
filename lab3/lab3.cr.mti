@@ -1,0 +1,71 @@
+X:/ece152a/lab3/big_number_first.v {1 {vlog -work work -vopt X:/ece152a/lab3/big_number_first.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module big_number_first
+
+Top level modules:
+	big_number_first
+
+} {} {}} X:/ece152a/lab3/adder_tb.v {1 {vlog -work work -vopt X:/ece152a/lab3/adder_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module adder_tb
+
+Top level modules:
+	adder_tb
+
+} {} {}} X:/ece152a/lab3/shifter.v {1 {vlog -work work -vopt X:/ece152a/lab3/shifter.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} X:/ece152a/lab3/test_tb.v {1 {vlog -work work -vopt X:/ece152a/lab3/test_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module test_tb
+
+Top level modules:
+	test_tb
+
+} {} {}} X:/ece152a/lab3/float_add.v {1 {vlog -work work -vopt X:/ece152a/lab3/float_add.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module float_add
+
+Top level modules:
+	float_add
+
+} {} {}} X:/ece152a/lab3/big_number_first_tb.v {1 {vlog -work work -vopt X:/ece152a/lab3/big_number_first_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module big_number_first_tb
+
+Top level modules:
+	big_number_first_tb
+
+} {} {}} X:/ece152a/lab3/shifter_tb.v {1 {vlog -work work -vopt X:/ece152a/lab3/shifter_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module shifter_tb
+
+Top level modules:
+	shifter_tb
+
+} {} {}} X:/ece152a/lab3/fullAdder.v {1 {vlog -work work -vopt X:/ece152a/lab3/fullAdder.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module fullAdder
+
+Top level modules:
+	fullAdder
+
+} {} {}} X:/ece152a/lab3/adder.v {1 {vlog -work work -vopt X:/ece152a/lab3/adder.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module adder
+
+Top level modules:
+	adder
+
+} {} {}} X:/ece152a/lab3/test.v {1 {vlog -work work -vopt X:/ece152a/lab3/test.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}}
