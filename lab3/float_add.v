@@ -98,7 +98,7 @@ always @* begin
 					// Normalizing - determining how many bits to shift mantissa
 					casex(resultManShift)
 						5'b00001: numToShift1 = 3'b100;
-						5'b0001x:	numToShift1 = 3'b011;
+						5'b0001x: numToShift1 = 3'b011;
 						5'b001xx: numToShift1 = 3'b010;
 						5'b01xxx: numToShift1 = 3'b001;
 						default: numToShift1 = 3'b000;
