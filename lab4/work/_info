@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+dC:\modeltech_10.1b\examples
+vcounter
+!i10b 1
+V8U>NjVcVG;1Q=MD[W`[733
+r1
+!s85 0
+31
+Ih^RGV5Pl?YZonkLE>5WZf2
+Z0 dX:\ece152a\lab4
+w1557370088
+8X:/ece152a/lab4/counter.v
+FX:/ece152a/lab4/counter.v
+L0 1
+Z1 OE;L;10.1b;51
+Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab4/counter.v|
+!s100 z;3V8IlzbH7O781d:Um_n0
+!s108 1557370092.711000
+!s107 X:/ece152a/lab4/counter.v|
+vcounter_tb
+VN6X[[7nWg]oz4[ZCKXDXe0
+r1
+31
+I@R9z<Y8^gB77FV=19c_C31
+Z3 dX:\ece152a\lab4
+w1557370030
+8X:/ece152a/lab4/counter_tb.v
+FX:/ece152a/lab4/counter_tb.v
+L0 1
+R1
+R2
+!i10b 1
+!s85 0
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab4/counter_tb.v|
+!s100 0V_NoQc2H8?Xjf7JgTTm42
+!s108 1557370093.070000
+!s107 X:/ece152a/lab4/counter_tb.v|
+vdecoder
+IDz@Q`6g0LRjIa0]8Z<U4@1
+VMaG7EMgJDm[fUMO4ICBeX0
+R3
+Z4 w1557366670
+8X:/ece152a/lab4/decoder.v
+FX:/ece152a/lab4/decoder.v
+L0 1
+R1
+r1
+31
+R2
+!s100 `1Xff3>Dan@M3NhC8]nKH1
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab4/decoder.v|
+!s108 1557367794.073000
+!s107 X:/ece152a/lab4/decoder.v|
+!i10b 1
+!s85 0
+vdecoder_tb
+InKT0bbGjMie1N`UlTSjTZ2
+V=ka5g8LfkPkNOiWKG@ETE2
+R3
+R4
+8X:/ece152a/lab4/decoder_tb.v
+FX:/ece152a/lab4/decoder_tb.v
+L0 1
+R1
+r1
+31
+R2
+!s100 IYd<f78n]KehPZP^<NU5z1
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab4/decoder_tb.v|
+!s108 1557367794.416000
+!s107 X:/ece152a/lab4/decoder_tb.v|
+!i10b 1
+!s85 0
