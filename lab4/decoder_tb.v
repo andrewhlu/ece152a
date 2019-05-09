@@ -20,7 +20,6 @@ decoder test(
 	.G(sim_G)
 );
 
-
 initial begin
 	sim_in = 3'b000;
 

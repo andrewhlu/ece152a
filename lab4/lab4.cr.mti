@@ -1,4 +1,25 @@
-X:/ece152a/lab4/decoder.v {1 {vlog -work work -vopt X:/ece152a/lab4/decoder.v
+X:/ece152a/lab4/counter.v {1 {vlog -work work -vopt X:/ece152a/lab4/counter.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module counter
+
+Top level modules:
+	counter
+
+} {} {}} X:/ece152a/lab4/main.v {1 {vlog -work work -vopt X:/ece152a/lab4/main.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module main
+
+Top level modules:
+	main
+
+} {} {}} X:/ece152a/lab4/counter_tb.v {1 {vlog -work work -vopt X:/ece152a/lab4/counter_tb.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module counter_tb
+
+Top level modules:
+	counter_tb
+
+} {} {}} X:/ece152a/lab4/decoder.v {1 {vlog -work work -vopt X:/ece152a/lab4/decoder.v
 Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
 -- Compiling module decoder
 

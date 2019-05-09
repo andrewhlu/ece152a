@@ -1,0 +1,74 @@
+|main
+clock => clock~0.IN1
+max_count[0] => max_count[0]~2.IN1
+max_count[1] => max_count[1]~1.IN1
+max_count[2] => max_count[2]~0.IN1
+enable => enable~0.IN1
+reset => reset~0.IN1
+direction => direction~0.IN1
+A <= decoder:step2.A
+B <= decoder:step2.B
+C <= decoder:step2.C
+D <= decoder:step2.D
+E <= decoder:step2.E
+F <= decoder:step2.F
+G <= decoder:step2.G
+
+
+|main|counter:step1
+clock => countNext[2].CLK
+clock => countNext[1].CLK
+clock => countNext[0].CLK
+max_count[0] => countNext~2.DATAB
+max_count[0] => Equal0.IN2
+max_count[1] => countNext~1.DATAB
+max_count[1] => Equal0.IN1
+max_count[2] => countNext~0.DATAB
+max_count[2] => Equal0.IN0
+enable => countNext[2].ENA
+enable => countNext[1].ENA
+enable => countNext[0].ENA
+reset => always1~2.IN1
+reset => always1~0.IN0
+direction => countNext~6.OUTPUTSELECT
+direction => countNext~7.OUTPUTSELECT
+direction => countNext~8.OUTPUTSELECT
+direction => always1~1.IN0
+direction => always1~3.IN0
+count[0] <= countNext[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= countNext[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= countNext[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decoder:step2
+in[0] => D~1.IN0
+in[0] => C~1.IN0
+in[0] => B~0.IN0
+in[0] => A~0.IN1
+in[0] => F~0.IN1
+in[0] => D~5.IN0
+in[0] => B~2.IN0
+in[0] => A~1.IN1
+in[1] => D~5.IN1
+in[1] => D~2.IN1
+in[1] => B~0.IN1
+in[1] => A~3.IN1
+in[1] => D~0.IN1
+in[1] => C~0.IN1
+in[1] => B~2.IN1
+in[2] => F~0.IN0
+in[2] => D~0.IN0
+in[2] => C~0.IN0
+in[2] => A~0.IN0
+in[2] => D~2.IN0
+in[2] => B~1.IN0
+in[2] => A~1.IN0
+A <= A~3.DB_MAX_OUTPUT_PORT_TYPE
+B <= B~3.DB_MAX_OUTPUT_PORT_TYPE
+C <= C~1.DB_MAX_OUTPUT_PORT_TYPE
+D <= D~6.DB_MAX_OUTPUT_PORT_TYPE
+E <= E~0.DB_MAX_OUTPUT_PORT_TYPE
+F <= F~2.DB_MAX_OUTPUT_PORT_TYPE
+G <= G~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
