@@ -22,23 +22,23 @@ Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
 !i10b 1
 !s85 0
 vcounter_tb
-I2FifK>zNn3JSV7]>>X6_?0
+!i10b 1
 VN6X[[7nWg]oz4[ZCKXDXe0
+r1
+!s85 0
+31
+I0gP_U9DI:RDOYPR8c7aDB2
 Z3 dX:\ece152a\lab4
-w1557437340
+w1557443916
 8X:/ece152a/lab4/counter_tb.v
 FX:/ece152a/lab4/counter_tb.v
 L0 1
 R1
-r1
-31
-R2
-!s100 c;gSTTjXMLMQbPDWiN>=n2
 !s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab4/counter_tb.v|
-!s108 1557442710.254000
+R2
+!s100 kXYDLc^X8;a9fLGam[lmc3
+!s108 1557443926.712000
 !s107 X:/ece152a/lab4/counter_tb.v|
-!i10b 1
-!s85 0
 vdecoder
 VMaG7EMgJDm[fUMO4ICBeX0
 r1
@@ -94,10 +94,8 @@ R2
 !i10b 1
 !s85 0
 vmain_tb
-!i10b 1
 VDFCamQe8X=<UABF>6bJ7X2
 r1
-!s85 0
 31
 ILTVSe>Q9CgK]]ZECAFS]g0
 R3
@@ -106,8 +104,10 @@ w1557443420
 FX:/ece152a/lab4/main_tb.v
 L0 1
 R1
-!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab4/main_tb.v|
 R2
+!s90 -reportprogress|300|-work|work|-vopt|X:/ece152a/lab4/main_tb.v|
 !s100 ]fIPLMaE1Khzb@F]Z]HHk2
 !s108 1557443425.078000
 !s107 X:/ece152a/lab4/main_tb.v|
+!i10b 1
+!s85 0

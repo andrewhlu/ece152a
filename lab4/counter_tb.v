@@ -24,7 +24,7 @@ initial begin
 	clock_sim = 0;
 
 	max_count_sim = 3'b101; //Max count is 5
-	direction_sim = 1'b0; //Counting up
+	direction_sim = 1'b1; //Counting up
 	enable_sim = 1'b1; //Enabled
 	reset_sim = 1'b0; //No reset
 
