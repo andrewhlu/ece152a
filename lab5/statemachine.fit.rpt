@@ -1,0 +1,550 @@
+Fitter report for statemachine
+Thu May 23 15:09:39 2019
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Fitter Device Options
+  5. Input Pins
+  6. Output Pins
+  7. All Package Pins
+  8. Control Signals
+  9. Cascade Chains
+ 10. Non-Global High Fan-Out Signals
+ 11. LAB
+ 12. Local Routing Interconnect
+ 13. LAB External Interconnect
+ 14. Row Interconnect
+ 15. LAB Column Interconnect
+ 16. Fitter Resource Usage Summary
+ 17. Fitter Resource Utilization by Entity
+ 18. Delay Chain Summary
+ 19. Pin-Out File
+ 20. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------+
+; Fitter Summary                                                  ;
++-----------------------+-----------------------------------------+
+; Fitter Status         ; Successful - Thu May 23 15:09:39 2019   ;
+; Quartus II Version    ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
+; Revision Name         ; statemachine                            ;
+; Top-level Entity Name ; statemachine                            ;
+; Family                ; FLEX6000                                ;
+; Device                ; EPF6016TC144-2                          ;
+; Timing Models         ; Final                                   ;
+; Total logic elements  ; 104 / 1,320 ( 8 % )                     ;
+; Total pins            ; 12 / 117 ( 10 % )                       ;
++-----------------------+-----------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Fitter Settings                                                                 ;
++------------------------------------------------+----------------+---------------+
+; Option                                         ; Setting        ; Default Value ;
++------------------------------------------------+----------------+---------------+
+; Device                                         ; EPF6016TC144-2 ;               ;
+; Use smart compilation                          ; Off            ; Off           ;
+; Use TimeQuest Timing Analyzer                  ; Off            ; Off           ;
+; Optimize Timing for ECOs                       ; Off            ; Off           ;
+; Regenerate full fit report during ECO compiles ; Off            ; Off           ;
+; Optimize IOC Register Placement for Timing     ; On             ; On            ;
+; Limit to One Fitting Attempt                   ; Off            ; Off           ;
+; Fitter Initial Placement Seed                  ; 1              ; 1             ;
+; Slow Slew Rate                                 ; Off            ; Off           ;
+; Fitter Effort                                  ; Auto Fit       ; Auto Fit      ;
+; Auto Global Clock                              ; On             ; On            ;
+; Auto Global Output Enable                      ; On             ; On            ;
+; Auto Global Register Control Signals           ; On             ; On            ;
++------------------------------------------------+----------------+---------------+
+
+
++--------------------------------------------------------------------+
+; Fitter Device Options                                              ;
++----------------------------------------------+---------------------+
+; Option                                       ; Setting             ;
++----------------------------------------------+---------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                 ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                 ;
+; Enable device-wide output enable (DEV_OE)    ; Off                 ;
+; Enable INIT_DONE output                      ; Off                 ;
+; Configuration scheme                         ; Passive Serial      ;
+; nCEO                                         ; Unreserved          ;
+; nWS, nRS, nCS, CS                            ; Unreserved          ;
+; RDYnBUSY                                     ; Unreserved          ;
+; Reserve all unused pins                      ; As input tri-stated ;
++----------------------------------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                ;
++--------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
+; Name   ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; PCI I/O Enabled ; Single-Pin CE ;
++--------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
+; brake  ; 63    ; --  ; 17   ; 26      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; left   ; 60    ; --  ; 14   ; 14      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; hazard ; 62    ; --  ; 16   ; 12      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; reset  ; 59    ; --  ; 13   ; 14      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; right  ; 61    ; --  ; 15   ; 14      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; clock  ; 64    ; --  ; 18   ; 6       ; no     ; no           ; no                      ; no            ; no              ; no            ;
++--------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                           ;
++--------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+
+; Name   ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ;
++--------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+
+; out[0] ; 136   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[1] ; 135   ; --  ; 6    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[4] ; 132   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[2] ; 134   ; --  ; 7    ; no           ; yes                      ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[3] ; 133   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[5] ; 131   ; --  ; 9    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
++--------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+
+
+
++---------------------------------------+
+; All Package Pins                      ;
++-------+----------------+--------------+
+; Pin # ; Usage          ; I/O Standard ;
++-------+----------------+--------------+
+; 1     ; RESERVED_INPUT ;              ;
+; 2     ; RESERVED_INPUT ;              ;
+; 3     ; RESERVED_INPUT ;              ;
+; 4     ; ^nCE           ;              ;
+; 5     ; GND_IO         ;              ;
+; 6     ; VCC_INT        ;              ;
+; 7     ; VCC_IO         ;              ;
+; 8     ; RESERVED_INPUT ;              ;
+; 9     ; RESERVED_INPUT ;              ;
+; 10    ; RESERVED_INPUT ;              ;
+; 11    ; RESERVED_INPUT ;              ;
+; 12    ; RESERVED_INPUT ;              ;
+; 13    ; +~TDI~         ; TTL          ;
+; 14    ; RESERVED_INPUT ;              ;
+; 15    ; RESERVED_INPUT ;              ;
+; 16    ; RESERVED_INPUT ;              ;
+; 17    ; GND+           ;              ;
+; 18    ; GND_IO         ;              ;
+; 19    ; VCC_IO         ;              ;
+; 20    ; GND+           ;              ;
+; 21    ; RESERVED_INPUT ;              ;
+; 22    ; RESERVED_INPUT ;              ;
+; 23    ; RESERVED_INPUT ;              ;
+; 24    ; RESERVED_INPUT ;              ;
+; 25    ; RESERVED_INPUT ;              ;
+; 26    ; RESERVED_INPUT ;              ;
+; 27    ; +~TMS~         ; TTL          ;
+; 28    ; RESERVED_INPUT ;              ;
+; 29    ; RESERVED_INPUT ;              ;
+; 30    ; GND_IO         ;              ;
+; 31    ; VCC_INT        ;              ;
+; 32    ; VCC_IO         ;              ;
+; 33    ; ^MSEL          ;              ;
+; 34    ; +~TCK~         ; TTL          ;
+; 35    ; RESERVED_INPUT ;              ;
+; 36    ; RESERVED_INPUT ;              ;
+; 37    ; RESERVED_INPUT ;              ;
+; 38    ; RESERVED_INPUT ;              ;
+; 39    ; RESERVED_INPUT ;              ;
+; 40    ; RESERVED_INPUT ;              ;
+; 41    ; RESERVED_INPUT ;              ;
+; 42    ; RESERVED_INPUT ;              ;
+; 43    ; RESERVED_INPUT ;              ;
+; 44    ; RESERVED_INPUT ;              ;
+; 45    ; RESERVED_INPUT ;              ;
+; 46    ; RESERVED_INPUT ;              ;
+; 47    ; RESERVED_INPUT ;              ;
+; 48    ; RESERVED_INPUT ;              ;
+; 49    ; RESERVED_INPUT ;              ;
+; 50    ; RESERVED_INPUT ;              ;
+; 51    ; RESERVED_INPUT ;              ;
+; 52    ; RESERVED_INPUT ;              ;
+; 53    ; ^nCONFIG       ;              ;
+; 54    ; GND_IO         ;              ;
+; 55    ; VCC_IO         ;              ;
+; 56    ; ^nSTATUS       ;              ;
+; 57    ; RESERVED_INPUT ;              ;
+; 58    ; RESERVED_INPUT ;              ;
+; 59    ; reset          ; TTL          ;
+; 60    ; left           ; TTL          ;
+; 61    ; right          ; TTL          ;
+; 62    ; hazard         ; TTL          ;
+; 63    ; brake          ; TTL          ;
+; 64    ; clock          ; TTL          ;
+; 65    ; RESERVED_INPUT ;              ;
+; 66    ; RESERVED_INPUT ;              ;
+; 67    ; RESERVED_INPUT ;              ;
+; 68    ; RESERVED_INPUT ;              ;
+; 69    ; RESERVED_INPUT ;              ;
+; 70    ; RESERVED_INPUT ;              ;
+; 71    ; RESERVED_INPUT ;              ;
+; 72    ; RESERVED_INPUT ;              ;
+; 73    ; *~TDO~         ; TTL          ;
+; 74    ; RESERVED_INPUT ;              ;
+; 75    ; RESERVED_INPUT ;              ;
+; 76    ; GND_IO         ;              ;
+; 77    ; VCC_INT        ;              ;
+; 78    ; VCC_IO         ;              ;
+; 79    ; RESERVED_INPUT ;              ;
+; 80    ; RESERVED_INPUT ;              ;
+; 81    ; RESERVED_INPUT ;              ;
+; 82    ; RESERVED_INPUT ;              ;
+; 83    ; RESERVED_INPUT ;              ;
+; 84    ; RESERVED_INPUT ;              ;
+; 85    ; RESERVED_INPUT ;              ;
+; 86    ; RESERVED_INPUT ;              ;
+; 87    ; RESERVED_INPUT ;              ;
+; 88    ; RESERVED_INPUT ;              ;
+; 89    ; GND+           ;              ;
+; 90    ; GND_IO         ;              ;
+; 91    ; VCC_IO         ;              ;
+; 92    ; GND+           ;              ;
+; 93    ; RESERVED_INPUT ;              ;
+; 94    ; RESERVED_INPUT ;              ;
+; 95    ; RESERVED_INPUT ;              ;
+; 96    ; RESERVED_INPUT ;              ;
+; 97    ; RESERVED_INPUT ;              ;
+; 98    ; RESERVED_INPUT ;              ;
+; 99    ; RESERVED_INPUT ;              ;
+; 100   ; RESERVED_INPUT ;              ;
+; 101   ; RESERVED_INPUT ;              ;
+; 102   ; GND_IO         ;              ;
+; 103   ; VCC_INT        ;              ;
+; 104   ; VCC_IO         ;              ;
+; 105   ; ^CONF_DONE     ;              ;
+; 106   ; RESERVED_INPUT ;              ;
+; 107   ; RESERVED_INPUT ;              ;
+; 108   ; RESERVED_INPUT ;              ;
+; 109   ; RESERVED_INPUT ;              ;
+; 110   ; RESERVED_INPUT ;              ;
+; 111   ; RESERVED_INPUT ;              ;
+; 112   ; RESERVED_INPUT ;              ;
+; 113   ; RESERVED_INPUT ;              ;
+; 114   ; RESERVED_INPUT ;              ;
+; 115   ; RESERVED_INPUT ;              ;
+; 116   ; RESERVED_INPUT ;              ;
+; 117   ; RESERVED_INPUT ;              ;
+; 118   ; RESERVED_INPUT ;              ;
+; 119   ; RESERVED_INPUT ;              ;
+; 120   ; RESERVED_INPUT ;              ;
+; 121   ; RESERVED_INPUT ;              ;
+; 122   ; RESERVED_INPUT ;              ;
+; 123   ; RESERVED_INPUT ;              ;
+; 124   ; RESERVED_INPUT ;              ;
+; 125   ; ^DATA          ;              ;
+; 126   ; GND_IO         ;              ;
+; 127   ; VCC_IO         ;              ;
+; 128   ; ^DCLK          ;              ;
+; 129   ; RESERVED_INPUT ;              ;
+; 130   ; RESERVED_INPUT ;              ;
+; 131   ; out[5]         ; TTL          ;
+; 132   ; out[4]         ; TTL          ;
+; 133   ; out[3]         ; TTL          ;
+; 134   ; out[2]         ; TTL          ;
+; 135   ; out[1]         ; TTL          ;
+; 136   ; out[0]         ; TTL          ;
+; 137   ; RESERVED_INPUT ;              ;
+; 138   ; RESERVED_INPUT ;              ;
+; 139   ; RESERVED_INPUT ;              ;
+; 140   ; RESERVED_INPUT ;              ;
+; 141   ; RESERVED_INPUT ;              ;
+; 142   ; RESERVED_INPUT ;              ;
+; 143   ; RESERVED_INPUT ;              ;
+; 144   ; RESERVED_INPUT ;              ;
++-------+----------------+--------------+
+
+
++------------------------------------------------+
+; Control Signals                                ;
++-------+-------+---------+-------+--------------+
+; Name  ; Pin # ; Fan-Out ; Usage ; Global Usage ;
++-------+-------+---------+-------+--------------+
+; clock ; 64    ; 6       ; Clock ; Non-global   ;
++-------+-------+---------+-------+--------------+
+
+
++----------------+
+; Cascade Chains ;
++--------+-------+
+; Length ; Count ;
++--------+-------+
+; 2      ; 4     ;
++--------+-------+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++--------------+------------------+
+; Name         ; Fan-Out          ;
++--------------+------------------+
+; brake        ; 26               ;
+; cs[3]        ; 19               ;
+; cs[4]        ; 15               ;
+; right        ; 14               ;
+; left         ; 14               ;
+; reset        ; 14               ;
+; cs[1]        ; 13               ;
+; hazard       ; 12               ;
+; cs[0]        ; 11               ;
+; Equal5~46    ; 11               ;
+; cs[2]        ; 11               ;
+; WideNor23~35 ; 11               ;
+; Equal12~24   ; 10               ;
+; cs[5]        ; 10               ;
+; WideNor18~40 ; 6                ;
+; WideNor26~84 ; 6                ;
+; clock        ; 6                ;
+; Equal8~38    ; 6                ;
+; always1~1659 ; 6                ;
+; Equal15~28   ; 5                ;
+; Equal10~28   ; 5                ;
+; always1~1652 ; 5                ;
+; Equal13~26   ; 5                ;
+; Equal11~17   ; 4                ;
+; always1~71   ; 4                ;
+; always1~1649 ; 4                ;
+; always1~15   ; 4                ;
+; Equal5~47    ; 4                ;
+; always1~1647 ; 3                ;
+; always1~1645 ; 3                ;
+; Equal11~18   ; 3                ;
+; always1~1651 ; 3                ;
+; Equal8~39    ; 3                ;
+; always1~63   ; 3                ;
+; WideNor8~73  ; 3                ;
+; always1~1646 ; 3                ;
+; Equal0~45    ; 3                ;
+; Equal2~28    ; 3                ;
+; Equal14~34   ; 3                ;
+; always1~1644 ; 3                ;
+; WideNor5~36  ; 3                ;
+; Equal0~44    ; 3                ;
+; Equal0~43    ; 3                ;
+; Equal9~22    ; 2                ;
+; Equal8~37    ; 2                ;
+; WideNor26    ; 2                ;
+; always1~1657 ; 2                ;
+; always1~1648 ; 2                ;
+; WideNor12~73 ; 2                ;
+; WideNor13~89 ; 2                ;
++--------------+------------------+
+
+
++-------------------------------------------+
+; LAB                                       ;
++--------------------------+----------------+
+; Number of Logic Elements ; Number of LABs ;
++--------------------------+----------------+
+; 0                        ; 117            ;
+; 1                        ; 0              ;
+; 2                        ; 0              ;
+; 3                        ; 0              ;
+; 4                        ; 1              ;
+; 5                        ; 0              ;
+; 6                        ; 2              ;
+; 7                        ; 8              ;
+; 8                        ; 4              ;
++--------------------------+----------------+
+
+
++--------------------------------------------------------------------+
+; Local Routing Interconnect                                         ;
++-----------------------------+--------------------------------------+
+; Local Routing Interconnects ; Number of Local Interconnect Regions ;
++-----------------------------+--------------------------------------+
+; 0                           ; 121                                  ;
+; 1                           ; 1                                    ;
+; 2                           ; 2                                    ;
+; 3                           ; 1                                    ;
+; 4                           ; 3                                    ;
+; 5                           ; 5                                    ;
+; 6                           ; 4                                    ;
+; 7                           ; 1                                    ;
++-----------------------------+--------------------------------------+
+
+
++-------------------------------------------------------------------+
+; LAB External Interconnect                                         ;
++----------------------------+--------------------------------------+
+; LAB External Interconnects ; Number of Local Interconnect Regions ;
++----------------------------+--------------------------------------+
+; 0                          ; 120                                  ;
+; 1                          ; 0                                    ;
+; 2                          ; 0                                    ;
+; 3                          ; 0                                    ;
+; 4                          ; 1                                    ;
+; 5                          ; 4                                    ;
+; 6                          ; 0                                    ;
+; 7                          ; 2                                    ;
+; 8                          ; 2                                    ;
+; 9                          ; 2                                    ;
+; 10                         ; 3                                    ;
+; 11                         ; 3                                    ;
+; 12                         ; 0                                    ;
+; 13                         ; 0                                    ;
+; 14                         ; 0                                    ;
+; 15                         ; 0                                    ;
+; 16                         ; 1                                    ;
++----------------------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Row Interconnect                                                                       ;
++-------+-------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+-------------------+-----------------------------+------------------------------+
+;  A    ;  28 / 96 ( 29 % ) ;  39 / 48 ( 81 % )           ;  4 / 48 ( 8 % )              ;
+;  B    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
+;  C    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
+;  D    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
+;  E    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
+;  F    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
+; Total ;  28 / 576 ( 5 % ) ;  39 / 288 ( 14 % )          ;  4 / 288 ( 1 % )             ;
++-------+-------------------+-----------------------------+------------------------------+
+
+
++---------------------------+
+; LAB Column Interconnect   ;
++-------+-------------------+
+; Col.  ; Interconnect Used ;
++-------+-------------------+
+; 1     ;  0 / 20 ( 0 % )   ;
+; 2     ;  0 / 20 ( 0 % )   ;
+; 3     ;  0 / 20 ( 0 % )   ;
+; 4     ;  0 / 20 ( 0 % )   ;
+; 5     ;  0 / 20 ( 0 % )   ;
+; 6     ;  0 / 20 ( 0 % )   ;
+; 7     ;  0 / 20 ( 0 % )   ;
+; 8     ;  0 / 20 ( 0 % )   ;
+; 9     ;  0 / 20 ( 0 % )   ;
+; 10    ;  0 / 20 ( 0 % )   ;
+; 11    ;  0 / 20 ( 0 % )   ;
+; 12    ;  0 / 20 ( 0 % )   ;
+; 13    ;  1 / 20 ( 5 % )   ;
+; 14    ;  1 / 20 ( 5 % )   ;
+; 15    ;  1 / 20 ( 5 % )   ;
+; 16    ;  1 / 20 ( 5 % )   ;
+; 17    ;  1 / 20 ( 5 % )   ;
+; 18    ;  1 / 20 ( 5 % )   ;
+; 19    ;  0 / 20 ( 0 % )   ;
+; 20    ;  0 / 20 ( 0 % )   ;
+; 21    ;  0 / 20 ( 0 % )   ;
+; 22    ;  0 / 20 ( 0 % )   ;
+; Total ;  6 / 440 ( 1 % )  ;
++-------+-------------------+
+
+
++---------------------------------------------------------+
+; Fitter Resource Usage Summary                           ;
++-----------------------------------+---------------------+
+; Resource                          ; Usage               ;
++-----------------------------------+---------------------+
+; Total logic elements              ; 104 / 1,320 ( 8 % ) ;
+; Registers                         ; 6 / 1,320 ( < 1 % ) ;
+; Logic elements in carry chains    ; 0                   ;
+; User inserted logic elements      ; 0                   ;
+; I/O pins                          ; 12 / 117 ( 10 % )   ;
+;     -- Clock pins                 ; 0 / 0 ( -- )        ;
+;     -- Dedicated input pins       ; 0 / 4 ( 0 % )       ;
+; Global signals                    ; 0                   ;
+; Maximum fan-out node              ; brake               ;
+; Maximum fan-out                   ; 26                  ;
+; Highest non-global fan-out signal ; brake               ;
+; Highest non-global fan-out        ; 26                  ;
+; Total fan-out                     ; 399                 ;
+; Average fan-out                   ; 3.33                ;
++-----------------------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |statemachine              ; 104 (104)   ; 6            ; 0           ; 12   ; 98 (98)      ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |statemachine       ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------+
+; Delay Chain Summary             ;
++--------+----------+-------------+
+; Name   ; Pin Type ; Pad to Core ;
++--------+----------+-------------+
+; right  ; Input    ; OFF         ;
+; hazard ; Input    ; OFF         ;
+; brake  ; Input    ; OFF         ;
+; reset  ; Input    ; OFF         ;
+; left   ; Input    ; OFF         ;
+; clock  ; Input    ; OFF         ;
+; out[0] ; Output   ; OFF         ;
+; out[1] ; Output   ; OFF         ;
+; out[2] ; Output   ; OFF         ;
+; out[3] ; Output   ; OFF         ;
+; out[4] ; Output   ; OFF         ;
+; out[5] ; Output   ; OFF         ;
+; ~TDI~  ; Input    ; OFF         ;
+; ~TMS~  ; Input    ; OFF         ;
+; ~TCK~  ; Input    ; OFF         ;
+; ~TDO~  ; Output   ; OFF         ;
++--------+----------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in X:/ece152a/lab5/statemachine.pin.
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Thu May 23 15:09:38 2019
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lab5 -c statemachine
+Info: Selected device EPF6016TC144-2 for design "statemachine"
+Warning: Feature SignalProbe is not available with your current license
+Info: Fitter is using the Classic Timing Analyzer
+Info: Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info: Assuming a global fmax requirement of 50 MHz
+    Info: Not setting a global tsu requirement
+    Info: Not setting a global tco requirement
+    Info: Not setting a global tpd requirement
+Info: Timing-driven compilation in progress
+Info: Started fitting attempt 1 on Thu May 23 2019 at 15:09:39
+Info: Quartus II Fitter was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 208 megabytes
+    Info: Processing ended: Thu May 23 15:09:39 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
