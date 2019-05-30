@@ -1,6 +1,6 @@
 # Lab 5
 
-We started this lab by building a state table in Excel listing every possible combination of inputs and their outputs. The full table is in the Excel spreadsheet attached. 
+We started this lab by drawing a state diagram (found in `ECE 152A Lab 5 Prelab 1.pdf`) and building a state table in Excel listing every possible combination of inputs and their outputs. The full table is in the Excel spreadsheet attached. 
 
 These are the cases we accounted for:
 * Reset
