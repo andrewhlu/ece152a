@@ -1,0 +1,22 @@
+X:/ece152a/lab5/main.v {1 {vlog -work work -vopt X:/ece152a/lab5/main.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module main
+
+Top level modules:
+	main
+
+} {} {}} X:/ece152a/lab5/statemachine.v {1 {vlog -work work -vopt X:/ece152a/lab5/statemachine.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module statemachine
+
+Top level modules:
+	statemachine
+
+} {} {}} X:/ece152a/lab5/dim.v {1 {vlog -work work -vopt X:/ece152a/lab5/dim.v
+Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling module dim
+
+Top level modules:
+	dim
+
+} {} {}}

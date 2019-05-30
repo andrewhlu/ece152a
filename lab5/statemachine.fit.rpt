@@ -1,5 +1,5 @@
 Fitter report for statemachine
-Thu May 23 15:09:39 2019
+Thu May 30 14:21:42 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -51,15 +51,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------+
 ; Fitter Summary                                                  ;
 +-----------------------+-----------------------------------------+
-; Fitter Status         ; Successful - Thu May 23 15:09:39 2019   ;
+; Fitter Status         ; Successful - Thu May 30 14:21:42 2019   ;
 ; Quartus II Version    ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name         ; statemachine                            ;
-; Top-level Entity Name ; statemachine                            ;
+; Top-level Entity Name ; main                                    ;
 ; Family                ; FLEX6000                                ;
 ; Device                ; EPF6016TC144-2                          ;
 ; Timing Models         ; Final                                   ;
-; Total logic elements  ; 104 / 1,320 ( 8 % )                     ;
-; Total pins            ; 12 / 117 ( 10 % )                       ;
+; Total logic elements  ; 109 / 1,320 ( 8 % )                     ;
+; Total pins            ; 14 / 117 ( 12 % )                       ;
 +-----------------------+-----------------------------------------+
 
 
@@ -101,18 +101,20 @@ applicable agreement for further details.
 +----------------------------------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                ;
-+--------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
-; Name   ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; PCI I/O Enabled ; Single-Pin CE ;
-+--------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
-; brake  ; 63    ; --  ; 17   ; 26      ; no     ; no           ; no                      ; no            ; no              ; no            ;
-; left   ; 60    ; --  ; 14   ; 14      ; no     ; no           ; no                      ; no            ; no              ; no            ;
-; hazard ; 62    ; --  ; 16   ; 12      ; no     ; no           ; no                      ; no            ; no              ; no            ;
-; reset  ; 59    ; --  ; 13   ; 14      ; no     ; no           ; no                      ; no            ; no              ; no            ;
-; right  ; 61    ; --  ; 15   ; 14      ; no     ; no           ; no                      ; no            ; no              ; no            ;
-; clock  ; 64    ; --  ; 18   ; 6       ; no     ; no           ; no                      ; no            ; no              ; no            ;
-+--------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                   ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
+; Name      ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; PCI I/O Enabled ; Single-Pin CE ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
+; brake     ; 63    ; --  ; 17   ; 31      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; right     ; 61    ; --  ; 15   ; 15      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; left      ; 60    ; --  ; 14   ; 14      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; hazard    ; 62    ; --  ; 16   ; 11      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; reset     ; 59    ; --  ; 13   ; 13      ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; clock     ; 64    ; --  ; 18   ; 6       ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; lights    ; 65    ; --  ; 19   ; 6       ; no     ; no           ; no                      ; no            ; no              ; no            ;
+; dim_clock ; 66    ; --  ; 20   ; 6       ; no     ; no           ; no                      ; no            ; no              ; no            ;
++-----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -120,12 +122,12 @@ applicable agreement for further details.
 +--------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+
 ; Name   ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ;
 +--------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+
-; out[0] ; 136   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
-; out[1] ; 135   ; --  ; 6    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
-; out[4] ; 132   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
-; out[2] ; 134   ; --  ; 7    ; no           ; yes                      ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
-; out[3] ; 133   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
 ; out[5] ; 131   ; --  ; 9    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[4] ; 132   ; --  ; 8    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[3] ; 133   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[2] ; 134   ; --  ; 7    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[1] ; 135   ; --  ; 6    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
+; out[0] ; 136   ; --  ; 5    ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ;
 +--------+-------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+
 
 
@@ -198,8 +200,8 @@ applicable agreement for further details.
 ; 62    ; hazard         ; TTL          ;
 ; 63    ; brake          ; TTL          ;
 ; 64    ; clock          ; TTL          ;
-; 65    ; RESERVED_INPUT ;              ;
-; 66    ; RESERVED_INPUT ;              ;
+; 65    ; lights         ; TTL          ;
+; 66    ; dim_clock      ; TTL          ;
 ; 67    ; RESERVED_INPUT ;              ;
 ; 68    ; RESERVED_INPUT ;              ;
 ; 69    ; RESERVED_INPUT ;              ;
@@ -295,66 +297,67 @@ applicable agreement for further details.
 +--------+-------+
 ; Length ; Count ;
 +--------+-------+
-; 2      ; 4     ;
+; 2      ; 5     ;
+; 3      ; 1     ;
 +--------+-------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+--------------+------------------+
-; Name         ; Fan-Out          ;
-+--------------+------------------+
-; brake        ; 26               ;
-; cs[3]        ; 19               ;
-; cs[4]        ; 15               ;
-; right        ; 14               ;
-; left         ; 14               ;
-; reset        ; 14               ;
-; cs[1]        ; 13               ;
-; hazard       ; 12               ;
-; cs[0]        ; 11               ;
-; Equal5~46    ; 11               ;
-; cs[2]        ; 11               ;
-; WideNor23~35 ; 11               ;
-; Equal12~24   ; 10               ;
-; cs[5]        ; 10               ;
-; WideNor18~40 ; 6                ;
-; WideNor26~84 ; 6                ;
-; clock        ; 6                ;
-; Equal8~38    ; 6                ;
-; always1~1659 ; 6                ;
-; Equal15~28   ; 5                ;
-; Equal10~28   ; 5                ;
-; always1~1652 ; 5                ;
-; Equal13~26   ; 5                ;
-; Equal11~17   ; 4                ;
-; always1~71   ; 4                ;
-; always1~1649 ; 4                ;
-; always1~15   ; 4                ;
-; Equal5~47    ; 4                ;
-; always1~1647 ; 3                ;
-; always1~1645 ; 3                ;
-; Equal11~18   ; 3                ;
-; always1~1651 ; 3                ;
-; Equal8~39    ; 3                ;
-; always1~63   ; 3                ;
-; WideNor8~73  ; 3                ;
-; always1~1646 ; 3                ;
-; Equal0~45    ; 3                ;
-; Equal2~28    ; 3                ;
-; Equal14~34   ; 3                ;
-; always1~1644 ; 3                ;
-; WideNor5~36  ; 3                ;
-; Equal0~44    ; 3                ;
-; Equal0~43    ; 3                ;
-; Equal9~22    ; 2                ;
-; Equal8~37    ; 2                ;
-; WideNor26    ; 2                ;
-; always1~1657 ; 2                ;
-; always1~1648 ; 2                ;
-; WideNor12~73 ; 2                ;
-; WideNor13~89 ; 2                ;
-+--------------+------------------+
++--------------------------------------------+
+; Non-Global High Fan-Out Signals            ;
++----------------------------------+---------+
+; Name                             ; Fan-Out ;
++----------------------------------+---------+
+; brake                            ; 31      ;
+; statemachine:step1|cs[1]         ; 16      ;
+; right                            ; 15      ;
+; left                             ; 14      ;
+; statemachine:step1|cs[4]         ; 14      ;
+; reset                            ; 13      ;
+; statemachine:step1|cs[2]         ; 12      ;
+; statemachine:step1|cs[3]         ; 12      ;
+; hazard                           ; 11      ;
+; statemachine:step1|cs[5]         ; 10      ;
+; statemachine:step1|cs[0]         ; 10      ;
+; statemachine:step1|Equal0~40     ; 8       ;
+; statemachine:step1|WideNor13     ; 7       ;
+; statemachine:step1|always1~41    ; 7       ;
+; lights                           ; 6       ;
+; statemachine:step1|Equal5~42     ; 6       ;
+; clock                            ; 6       ;
+; statemachine:step1|always1~1714  ; 6       ;
+; statemachine:step1|Equal8~35     ; 6       ;
+; dim_clock                        ; 6       ;
+; statemachine:step1|Equal0~41     ; 5       ;
+; statemachine:step1|Equal8~34     ; 5       ;
+; statemachine:step1|WideNor6      ; 5       ;
+; statemachine:step1|Equal9~35     ; 5       ;
+; statemachine:step1|always1~1740  ; 5       ;
+; statemachine:step1|Equal10~23    ; 4       ;
+; statemachine:step1|WideNor23~34  ; 4       ;
+; statemachine:step1|always1~53    ; 4       ;
+; statemachine:step1|WideNor21~77  ; 4       ;
+; statemachine:step1|Equal12~25    ; 4       ;
+; statemachine:step1|Selector5~173 ; 3       ;
+; statemachine:step1|Equal0~39     ; 3       ;
+; statemachine:step1|Selector0~224 ; 3       ;
+; statemachine:step1|always1~1705  ; 3       ;
+; statemachine:step1|Equal12~26    ; 3       ;
+; statemachine:step1|always1~1701  ; 3       ;
+; statemachine:step1|WideNor10     ; 3       ;
+; statemachine:step1|WideNor18~37  ; 3       ;
+; statemachine:step1|Equal11~17    ; 3       ;
+; statemachine:step1|always1~63    ; 3       ;
+; statemachine:step1|WideNor8~77   ; 3       ;
+; statemachine:step1|Equal1~23     ; 3       ;
+; statemachine:step1|Equal15~16    ; 3       ;
+; statemachine:step1|always1~71    ; 3       ;
+; statemachine:step1|Equal0~42     ; 3       ;
+; statemachine:step1|always1~79    ; 3       ;
+; statemachine:step1|Equal5~43     ; 3       ;
+; statemachine:step1|WideNor24     ; 3       ;
+; statemachine:step1|Selector2~277 ; 2       ;
+; statemachine:step1|always1~1711  ; 2       ;
++----------------------------------+---------+
 
 
 +-------------------------------------------+
@@ -362,15 +365,15 @@ applicable agreement for further details.
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 117            ;
+; 0                        ; 116            ;
 ; 1                        ; 0              ;
 ; 2                        ; 0              ;
 ; 3                        ; 0              ;
 ; 4                        ; 1              ;
 ; 5                        ; 0              ;
 ; 6                        ; 2              ;
-; 7                        ; 8              ;
-; 8                        ; 4              ;
+; 7                        ; 11             ;
+; 8                        ; 2              ;
 +--------------------------+----------------+
 
 
@@ -379,14 +382,15 @@ applicable agreement for further details.
 +-----------------------------+--------------------------------------+
 ; Local Routing Interconnects ; Number of Local Interconnect Regions ;
 +-----------------------------+--------------------------------------+
-; 0                           ; 121                                  ;
-; 1                           ; 1                                    ;
-; 2                           ; 2                                    ;
-; 3                           ; 1                                    ;
+; 0                           ; 118                                  ;
+; 1                           ; 2                                    ;
+; 2                           ; 3                                    ;
+; 3                           ; 2                                    ;
 ; 4                           ; 3                                    ;
-; 5                           ; 5                                    ;
-; 6                           ; 4                                    ;
+; 5                           ; 4                                    ;
+; 6                           ; 3                                    ;
 ; 7                           ; 1                                    ;
+; 8                           ; 2                                    ;
 +-----------------------------+--------------------------------------+
 
 
@@ -395,19 +399,19 @@ applicable agreement for further details.
 +----------------------------+--------------------------------------+
 ; LAB External Interconnects ; Number of Local Interconnect Regions ;
 +----------------------------+--------------------------------------+
-; 0                          ; 120                                  ;
+; 0                          ; 117                                  ;
 ; 1                          ; 0                                    ;
-; 2                          ; 0                                    ;
-; 3                          ; 0                                    ;
-; 4                          ; 1                                    ;
-; 5                          ; 4                                    ;
-; 6                          ; 0                                    ;
-; 7                          ; 2                                    ;
-; 8                          ; 2                                    ;
+; 2                          ; 2                                    ;
+; 3                          ; 1                                    ;
+; 4                          ; 2                                    ;
+; 5                          ; 2                                    ;
+; 6                          ; 1                                    ;
+; 7                          ; 1                                    ;
+; 8                          ; 4                                    ;
 ; 9                          ; 2                                    ;
 ; 10                         ; 3                                    ;
-; 11                         ; 3                                    ;
-; 12                         ; 0                                    ;
+; 11                         ; 1                                    ;
+; 12                         ; 1                                    ;
 ; 13                         ; 0                                    ;
 ; 14                         ; 0                                    ;
 ; 15                         ; 0                                    ;
@@ -420,13 +424,13 @@ applicable agreement for further details.
 +-------+-------------------+-----------------------------+------------------------------+
 ; Row   ; Interconnect Used ; Left Half Interconnect Used ; Right Half Interconnect Used ;
 +-------+-------------------+-----------------------------+------------------------------+
-;  A    ;  28 / 96 ( 29 % ) ;  39 / 48 ( 81 % )           ;  4 / 48 ( 8 % )              ;
+;  A    ;  33 / 96 ( 34 % ) ;  42 / 48 ( 88 % )           ;  4 / 48 ( 8 % )              ;
 ;  B    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
 ;  C    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
 ;  D    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
 ;  E    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
 ;  F    ;  0 / 96 ( 0 % )   ;  0 / 48 ( 0 % )             ;  0 / 48 ( 0 % )              ;
-; Total ;  28 / 576 ( 5 % ) ;  39 / 288 ( 14 % )          ;  4 / 288 ( 1 % )             ;
+; Total ;  33 / 576 ( 6 % ) ;  42 / 288 ( 15 % )          ;  4 / 288 ( 1 % )             ;
 +-------+-------------------+-----------------------------+------------------------------+
 
 
@@ -453,11 +457,11 @@ applicable agreement for further details.
 ; 16    ;  1 / 20 ( 5 % )   ;
 ; 17    ;  1 / 20 ( 5 % )   ;
 ; 18    ;  1 / 20 ( 5 % )   ;
-; 19    ;  0 / 20 ( 0 % )   ;
-; 20    ;  0 / 20 ( 0 % )   ;
+; 19    ;  1 / 20 ( 5 % )   ;
+; 20    ;  1 / 20 ( 5 % )   ;
 ; 21    ;  0 / 20 ( 0 % )   ;
 ; 22    ;  0 / 20 ( 0 % )   ;
-; Total ;  6 / 440 ( 1 % )  ;
+; Total ;  8 / 440 ( 2 % )  ;
 +-------+-------------------+
 
 
@@ -466,55 +470,59 @@ applicable agreement for further details.
 +-----------------------------------+---------------------+
 ; Resource                          ; Usage               ;
 +-----------------------------------+---------------------+
-; Total logic elements              ; 104 / 1,320 ( 8 % ) ;
+; Total logic elements              ; 109 / 1,320 ( 8 % ) ;
 ; Registers                         ; 6 / 1,320 ( < 1 % ) ;
 ; Logic elements in carry chains    ; 0                   ;
 ; User inserted logic elements      ; 0                   ;
-; I/O pins                          ; 12 / 117 ( 10 % )   ;
+; I/O pins                          ; 14 / 117 ( 12 % )   ;
 ;     -- Clock pins                 ; 0 / 0 ( -- )        ;
 ;     -- Dedicated input pins       ; 0 / 4 ( 0 % )       ;
 ; Global signals                    ; 0                   ;
 ; Maximum fan-out node              ; brake               ;
-; Maximum fan-out                   ; 26                  ;
+; Maximum fan-out                   ; 31                  ;
 ; Highest non-global fan-out signal ; brake               ;
-; Highest non-global fan-out        ; 26                  ;
-; Total fan-out                     ; 399                 ;
-; Average fan-out                   ; 3.33                ;
+; Highest non-global fan-out        ; 31                  ;
+; Total fan-out                     ; 408                 ;
+; Average fan-out                   ; 3.21                ;
 +-----------------------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                  ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |statemachine              ; 104 (104)   ; 6            ; 0           ; 12   ; 98 (98)      ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |statemachine       ; work         ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                       ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name      ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------+--------------+
+; |main                      ; 109 (0)     ; 6            ; 0           ; 14   ; 103 (0)      ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |main                    ; work         ;
+;    |dim:step2|             ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|dim:step2          ; work         ;
+;    |statemachine:step1|    ; 103 (103)   ; 6            ; 0           ; 0    ; 97 (97)      ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |main|statemachine:step1 ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------+
-; Delay Chain Summary             ;
-+--------+----------+-------------+
-; Name   ; Pin Type ; Pad to Core ;
-+--------+----------+-------------+
-; right  ; Input    ; OFF         ;
-; hazard ; Input    ; OFF         ;
-; brake  ; Input    ; OFF         ;
-; reset  ; Input    ; OFF         ;
-; left   ; Input    ; OFF         ;
-; clock  ; Input    ; OFF         ;
-; out[0] ; Output   ; OFF         ;
-; out[1] ; Output   ; OFF         ;
-; out[2] ; Output   ; OFF         ;
-; out[3] ; Output   ; OFF         ;
-; out[4] ; Output   ; OFF         ;
-; out[5] ; Output   ; OFF         ;
-; ~TDI~  ; Input    ; OFF         ;
-; ~TMS~  ; Input    ; OFF         ;
-; ~TCK~  ; Input    ; OFF         ;
-; ~TDO~  ; Output   ; OFF         ;
-+--------+----------+-------------+
++------------------------------------+
+; Delay Chain Summary                ;
++-----------+----------+-------------+
+; Name      ; Pin Type ; Pad to Core ;
++-----------+----------+-------------+
+; dim_clock ; Input    ; OFF         ;
+; lights    ; Input    ; OFF         ;
+; clock     ; Input    ; OFF         ;
+; right     ; Input    ; OFF         ;
+; reset     ; Input    ; OFF         ;
+; left      ; Input    ; OFF         ;
+; hazard    ; Input    ; OFF         ;
+; brake     ; Input    ; OFF         ;
+; out[0]    ; Output   ; OFF         ;
+; out[1]    ; Output   ; OFF         ;
+; out[2]    ; Output   ; OFF         ;
+; out[3]    ; Output   ; OFF         ;
+; out[4]    ; Output   ; OFF         ;
+; out[5]    ; Output   ; OFF         ;
+; ~TDI~     ; Input    ; OFF         ;
+; ~TMS~     ; Input    ; OFF         ;
+; ~TCK~     ; Input    ; OFF         ;
+; ~TDO~     ; Output   ; OFF         ;
++-----------+----------+-------------+
 
 
 +--------------+
@@ -529,7 +537,7 @@ The pin-out file can be found in X:/ece152a/lab5/statemachine.pin.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Thu May 23 15:09:38 2019
+    Info: Processing started: Thu May 30 14:21:41 2019
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lab5 -c statemachine
 Info: Selected device EPF6016TC144-2 for design "statemachine"
 Warning: Feature SignalProbe is not available with your current license
@@ -540,10 +548,10 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Timing-driven compilation in progress
-Info: Started fitting attempt 1 on Thu May 23 2019 at 15:09:39
+Info: Started fitting attempt 1 on Thu May 30 2019 at 14:21:41
 Info: Quartus II Fitter was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 208 megabytes
-    Info: Processing ended: Thu May 23 15:09:39 2019
+    Info: Processing ended: Thu May 30 14:21:42 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

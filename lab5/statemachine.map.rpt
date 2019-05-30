@@ -1,5 +1,5 @@
 Analysis & Synthesis report for statemachine
-Thu May 23 15:09:36 2019
+Thu May 30 14:21:40 2019
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -39,13 +39,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu May 23 15:09:36 2019   ;
+; Analysis & Synthesis Status ; Successful - Thu May 30 14:21:40 2019   ;
 ; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name               ; statemachine                            ;
-; Top-level Entity Name       ; statemachine                            ;
+; Top-level Entity Name       ; main                                    ;
 ; Family                      ; FLEX6000                                ;
-; Total logic elements        ; 104                                     ;
-; Total pins                  ; 12                                      ;
+; Total logic elements        ; 109                                     ;
+; Total pins                  ; 14                                      ;
 +-----------------------------+-----------------------------------------+
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 ; Option                                                         ; Setting        ; Default Value ;
 +----------------------------------------------------------------+----------------+---------------+
 ; Device                                                         ; EPF6016TC144-2 ;               ;
-; Top-level entity name                                          ; statemachine   ; statemachine  ;
+; Top-level entity name                                          ; main           ; statemachine  ;
 ; Family name                                                    ; FLEX6000       ; Stratix II    ;
 ; Use Generated Physical Constraints File                        ; Off            ;               ;
 ; Use smart compilation                                          ; Off            ; Off           ;
@@ -108,6 +108,8 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+--------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ;
 +----------------------------------+-----------------+------------------------+--------------------------------+
+; dim.v                            ; yes             ; User Verilog HDL File  ; X:/ece152a/lab5/dim.v          ;
+; main.v                           ; yes             ; User Verilog HDL File  ; X:/ece152a/lab5/main.v         ;
 ; statemachine.v                   ; yes             ; User Verilog HDL File  ; X:/ece152a/lab5/statemachine.v ;
 +----------------------------------+-----------------+------------------------+--------------------------------+
 
@@ -117,29 +119,31 @@ applicable agreement for further details.
 +--------------------------------+------------+
 ; Resource                       ; Usage      ;
 +--------------------------------+------------+
-; Total logic elements           ; 104        ;
-; Total combinational functions  ; 104        ;
-;     -- Total 4-input functions ; 78         ;
-;     -- Total 3-input functions ; 19         ;
-;     -- Total 2-input functions ; 7          ;
-;     -- Total 1-input functions ; 0          ;
+; Total logic elements           ; 109        ;
+; Total combinational functions  ; 109        ;
+;     -- Total 4-input functions ; 74         ;
+;     -- Total 3-input functions ; 24         ;
+;     -- Total 2-input functions ; 10         ;
+;     -- Total 1-input functions ; 1          ;
 ;     -- Total 0-input functions ; 0          ;
 ; Total registers                ; 6          ;
-; I/O pins                       ; 12         ;
+; I/O pins                       ; 14         ;
 ; Maximum fan-out node           ; brake      ;
-; Maximum fan-out                ; 26         ;
-; Total fan-out                  ; 399        ;
-; Average fan-out                ; 3.44       ;
+; Maximum fan-out                ; 31         ;
+; Total fan-out                  ; 408        ;
+; Average fan-out                ; 3.32       ;
 +--------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |statemachine              ; 104 (104)   ; 6            ; 0           ; 12   ; 98 (98)      ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |statemachine       ; work         ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name      ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------+--------------+
+; |main                      ; 109 (0)     ; 6            ; 0           ; 14   ; 103 (0)      ; 0 (0)             ; 6 (0)            ; 0 (0)           ; 0 (0)      ; |main                    ; work         ;
+;    |dim:step2|             ; 6 (6)       ; 0            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|dim:step2          ; work         ;
+;    |statemachine:step1|    ; 103 (103)   ; 6            ; 0           ; 0    ; 97 (97)      ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |main|statemachine:step1 ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -164,31 +168,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Thu May 23 15:09:35 2019
+    Info: Processing started: Thu May 30 14:21:38 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c statemachine
+Info: Found 1 design units, including 1 entities, in source file dim.v
+    Info: Found entity 1: dim
+Info: Found 1 design units, including 1 entities, in source file main.v
+    Info: Found entity 1: main
+Info: Found 1 design units, including 1 entities, in source file statemachine_tb.v
+    Info: Found entity 1: statemachine_tb
 Info: Found 1 design units, including 1 entities, in source file statemachine.v
     Info: Found entity 1: statemachine
-Info: Elaborating entity "statemachine" for the top level hierarchy
+Info: Elaborating entity "main" for the top level hierarchy
+Info: Elaborating entity "statemachine" for hierarchy "statemachine:step1"
 Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(25): casex/casez item expression overlaps with a previous casex/casez item expression
 Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(30): casex/casez item expression overlaps with a previous casex/casez item expression
 Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(33): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(34): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(35): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(36): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(37): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(38): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(39): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(40): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(41): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(42): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(43): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(44): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(45): casex/casez item expression overlaps with a previous casex/casez item expression
 Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(46): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(47): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(48): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(49): casex/casez item expression overlaps with a previous casex/casez item expression
-Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(50): casex/casez item expression overlaps with a previous casex/casez item expression
 Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(51): casex/casez item expression overlaps with a previous casex/casez item expression
 Warning (10272): Verilog HDL Case Statement warning at statemachine.v(52): case item expression covers a value already covered by a previous case item
 Warning (10272): Verilog HDL Case Statement warning at statemachine.v(53): case item expression covers a value already covered by a previous case item
@@ -202,14 +197,15 @@ Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(61): casex/ca
 Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(62): casex/casez item expression overlaps with a previous casex/casez item expression
 Warning (10935): Verilog HDL Casex/Casez warning at statemachine.v(63): casex/casez item expression overlaps with a previous casex/casez item expression
 Warning (10763): Verilog HDL warning at statemachine.v(18): case statement has overlapping case item expressions with non-constant or don't care bits - unable to check case statement for completeness
-Info: Implemented 116 device resources after synthesis - the final resource count might be different
-    Info: Implemented 6 input pins
+Info: Elaborating entity "dim" for hierarchy "dim:step2"
+Info: Implemented 123 device resources after synthesis - the final resource count might be different
+    Info: Implemented 8 input pins
     Info: Implemented 6 output pins
-    Info: Implemented 104 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Implemented 109 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 17 warnings
     Info: Peak virtual memory: 211 megabytes
-    Info: Processing ended: Thu May 23 15:09:36 2019
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Thu May 30 14:21:40 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

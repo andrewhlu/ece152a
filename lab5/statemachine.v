@@ -30,7 +30,7 @@ always @(posedge clock) begin
 		11'bxxxxxx00100: cs = 6'b000000;
 		11'bxxxxxx000x1: cs = 6'b111111;
 		11'bxxxxxx011x1: cs = 6'b111111;
-		11'bxxxxxx0xx11: cs = 6'b111111;
+		11'bxxxxxx00011: cs = 6'b111111;
 		11'b000000010x1: cs = 6'b001111;
 		11'b001000010x1: cs = 6'b011111;
 		11'b011000010x1: cs = 6'b111111;

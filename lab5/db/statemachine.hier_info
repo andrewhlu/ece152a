@@ -1,4 +1,21 @@
-|statemachine
+|main
+clock => clock~0.IN1
+reset => reset~0.IN1
+left => left~0.IN1
+right => right~0.IN1
+hazard => hazard~0.IN1
+brake => brake~0.IN1
+dim_clock => dim_clock~0.IN1
+lights => lights~0.IN1
+out[0] <= dim:step2.out
+out[1] <= dim:step2.out
+out[2] <= dim:step2.out
+out[3] <= dim:step2.out
+out[4] <= dim:step2.out
+out[5] <= dim:step2.out
+
+
+|main|statemachine:step1
 clock => cs[5].CLK
 clock => cs[4].CLK
 clock => cs[3].CLK
@@ -42,7 +59,7 @@ reset => WideNor9.IN8
 reset => WideNor8.IN8
 reset => WideNor7.IN8
 reset => WideNor6.IN8
-reset => WideNor5.IN0
+reset => WideNor5.IN2
 reset => WideNor4.IN2
 reset => WideNor3.IN2
 reset => WideNor2.IN2
@@ -74,6 +91,7 @@ left => WideNor13.IN6
 left => WideNor12.IN6
 left => WideNor11.IN6
 left => WideNor10.IN6
+left => WideNor5.IN0
 left => WideNor3.IN0
 left => WideNor2.IN0
 left => Equal7.IN12
@@ -115,6 +133,7 @@ right => WideNor9.IN7
 right => WideNor8.IN7
 right => WideNor7.IN7
 right => WideNor6.IN7
+right => WideNor5.IN1
 right => WideNor3.IN1
 right => Equal7.IN13
 right => Equal6.IN13
@@ -160,7 +179,7 @@ hazard => Equal0.IN14
 hazard => WideNor0.IN4
 hazard => WideNor24.IN8
 hazard => WideNor25.IN2
-hazard => WideNor5.IN2
+hazard => WideNor5.IN4
 brake => WideNor27.IN3
 brake => WideNor26.IN9
 brake => WideNor25.IN1
@@ -201,7 +220,7 @@ brake => WideNor14.IN9
 brake => WideNor8.IN9
 brake => WideNor9.IN9
 brake => WideNor7.IN9
-brake => WideNor5.IN1
+brake => WideNor5.IN3
 brake => WideNor4.IN3
 brake => WideNor3.IN3
 brake => WideNor6.IN9
@@ -211,5 +230,38 @@ out[2] <= cs[2].DB_MAX_OUTPUT_PORT_TYPE
 out[3] <= cs[3].DB_MAX_OUTPUT_PORT_TYPE
 out[4] <= cs[4].DB_MAX_OUTPUT_PORT_TYPE
 out[5] <= cs[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|dim:step2
+in[0] => out~5.OUTPUTSELECT
+in[0] => out~11.DATAB
+in[1] => out~4.OUTPUTSELECT
+in[1] => out~10.DATAB
+in[2] => out~3.OUTPUTSELECT
+in[2] => out~9.DATAB
+in[3] => out~2.OUTPUTSELECT
+in[3] => out~8.DATAB
+in[4] => out~1.OUTPUTSELECT
+in[4] => out~7.DATAB
+in[5] => out~0.OUTPUTSELECT
+in[5] => out~6.DATAB
+clock => out~5.DATAA
+clock => out~4.DATAA
+clock => out~3.DATAA
+clock => out~2.DATAA
+clock => out~1.DATAA
+clock => out~0.DATAA
+lights => out~11.OUTPUTSELECT
+lights => out~10.OUTPUTSELECT
+lights => out~9.OUTPUTSELECT
+lights => out~8.OUTPUTSELECT
+lights => out~7.OUTPUTSELECT
+lights => out~6.OUTPUTSELECT
+out[0] <= out~11.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~10.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~9.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~8.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~7.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out~6.DB_MAX_OUTPUT_PORT_TYPE
 
 

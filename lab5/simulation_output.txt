@@ -1,0 +1,65 @@
+# Case 1: Everything off
+# 000000
+# 000000
+# 000000
+# 000000
+# Case 2: Left on
+# 000000
+# 001000
+# 011000
+# 111000
+# Case 3: Right on
+# 000000
+# 000100
+# 000110
+# 000111
+# Case 4: Left and right on
+# 000000
+# 111111
+# 000000
+# 111111
+# Case 5: Left and hazard on
+# 000000
+# 111111
+# 000000
+# 111111
+# Case 6: Right and hazard on
+# 000000
+# 111111
+# 000000
+# 111111
+# Case 7: Left and brake on
+# 001111
+# 011111
+# 111111
+# 000111
+# Case 8: Right and brake on
+# 111000
+# 111100
+# 111110
+# 111111
+# Case 9: Left, right, and brake on
+# 111111
+# 111111
+# 111111
+# 111111
+# Case 10: Just brake on
+# 111111
+# 111111
+# 111111
+# 111111
+# Case 11: Left and reset on
+# 000000
+# 000000
+# 000000
+# 000000
+# Case 12: Right and reset on
+# 000000
+# 000000
+# 000000
+# 000000
+# Case 13: Everything off
+# 000000
+# 000000
+# 000000
+# 000000
